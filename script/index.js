@@ -4,6 +4,7 @@ var js_desc_inss;
 var js_total_desc;
 var js_sal_bruto;
 var js_sal_liq;
+var js_resposta = true;
 
 
 // Entrda de dados:
@@ -62,19 +63,35 @@ if(js_sal_liq > 10500) {
     }
 }
 
+do{
+js_resposta = window.confirm("Deseja continuar ?");
+}
+while(js_resposta == true);
+
 
 // switch case:             
 
-var js_nome;
+var js_nome
 
 function Form() {
-    js_nome = parseInt(document.form.f_nome.value)
 
+    js_nome = parseInt(document.form_mes.f_nome.value);
 
-switch (js_nome) {
-    case 1: document.form.f_nomemes.value = "Janeiro"; break;
-    default: document.form.f_nomemes.value = "Mês inválido"; break;
-}
+    switch(js_nome) {
+        case 1: document.form_mes.f_nomemes.value = "janeiro"; break;
+        case 2: document.form_mes.f_nomemes.value = "fevereiro"; break;
+        case 3: document.form_mes.f_nomemes.value = "março"; break;
+        case 4: document.form_mes.f_nomemes.value = "Abril"; break;
+        case 5: document.form_mes.f_nomemes.value = "Maio"; break;
+        case 6: document.form_mes.f_nomemes.value = "Junho"; break;
+        case 7: document.form_mes.f_nomemes.value = "Julho"; break;
+        case 8: document.form_mes.f_nomemes.value = "Agosto"; break;
+        case 9: document.form_mes.f_nomemes.value = "Setembro"; break;
+        case 10: document.form_mes.f_nomemes.value = "Outubro"; break;
+        case 11: document.form_mes.f_nomemes.value = "Novembro"; break;
+        case 12: document.form_mes.f_nomemes.value = "Dezembro"; break;
+        default: document.form_mes.f_nomemes.value = "Mês inválido!"; break;
+    }
 
 }
 
@@ -83,6 +100,38 @@ switch (js_nome) {
 var nmr = 3;
 
 nmr > 10? document.write("sim"):document.write("nao");
+
+// While com um laço contador:
+
+var number = 1;
+
+while (number < 10) {
+    document.write(number)
+    number = number + 1
+}
+
+// while com usuário determinando parada:
+
+var contador = 1;
+var resposta = true;
+
+while (resposta == true) {
+    document.write(contador)
+    contador +=1
+    resposta = window.confirm("deseja continuar ?")
+}
+
+// utilização do for:
+
+var js_num;
+
+for (js_num = 1; js_num <= 10; js_num  = js_num + 2) {
+    document.write("<p>" + js_num)
+}
+
+
+
+
 
 
 
