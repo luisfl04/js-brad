@@ -7,12 +7,13 @@
 </head>
 <body>
     
-<form name="form_mes" method="post" action="#">
-    <label>insira o numero do mês:</label>
-    <input type="text" name="f_nome" value="0">
-    <input type="button" name="btn_form" onclick="Form()" value="clique">
-    <input type="text" name="f_nomemes">
+<form name="form_curso" method="post" action="#">
+    <label>insira o curso:</label>
+    <input type="text" name="f_cursodig" size="9" maxlength="5">
+    <input type="button" name="btn_validar" onclick="Validar()" value="validar">
     <input type="reset" name="btn_reset" value="resetar">
+    <label>Digite o código do curso:</label>
+    <input type="text" name="f_codcurso" size="16" maxlength="11">
 </form>
     <script src="script/script.js"></script>
 </body>

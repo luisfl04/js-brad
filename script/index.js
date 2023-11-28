@@ -129,6 +129,37 @@ for (js_num = 1; js_num <= 10; js_num  = js_num + 2) {
     document.write("<p>" + js_num)
 }
 
+// for aninhado:
+for (var js_number = 1; js_number <=2; js_number++) {
+    for (var js_numbertwo = 1; js_numbertwo <=3; js_numbertwo++){
+        document.write(js_numbertwo)
+    }
+    document.write(js_number)
+}
+
+// Método confirm:
+var condicao = window.confirm()
+
+if (condicao == true) {
+    window.alert("True")
+} else {
+    window.alert("False")
+}
+
+// Aplicando o método "toUpperCase()" em um form:
+var curso_dig;
+
+function Validar() {
+    curso_dig = document.form_curso.f_cursodig.value;
+
+    if(curso_dig.toUpperCase() == "SIST"){
+        document.form_curso.f_codcurso.value = "SIST001/FB";
+    }
+    else {
+        window.alert("Curso inválido")
+    }
+}
+
 
 
 
